@@ -60,9 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Populate keyboard keys dropdown
     const keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', 'Backspace', 'Tab', 'Shift', 'Control', 'Alt', 'Escape'];
+    
+    // Add A-Z
     for (let i = 65; i <= 90; i++) {
         keys.push(String.fromCharCode(i));
     }
+    
+    // Add a-z
+	for (let i = 97; i <= 122; i++) {
+	    keys.push(String.fromCharCode(i));
+	}
+	
     keys.forEach(key => {
         const option = document.createElement('option');
         option.value = key;
