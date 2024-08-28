@@ -1,142 +1,60 @@
-/* Defina um layout básico com dimensões flexíveis */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+/* Custom styles to complement Tailwind CSS */
+body {
+    font-family: 'Arial', sans-serif;
 }
 
-/* Contêiner principal se adapta ao tamanho da tela */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    max-width: 800px;
 }
 
-/* Estilos básicos para elementos dentro da IDE */
-.ide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
+#logArea {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
 }
 
-/* Responsividade da área de objetos arrastáveis */
-.drag-area {
-    width: 100%;
-    height: 60vh; /* Altura relativa ao viewport */
-    border: 2px dashed #ccc;
+#keyMappings {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
+    gap: 0.5rem;
 }
 
-.draggable {
-    width: 80px;
-    height: 80px;
-    background-color: #007bff;
+.key-mapping {
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.key-mapping button {
+    background-color: #ff4136;
     color: white;
+    border: none;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    margin: 0.5rem;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
     cursor: pointer;
 }
 
-/* Ajuste da interface para dispositivos móveis */
-@media (max-width: 768px) {
-    .drag-area {
-        height: 50vh;
-        flex-direction: column;
-        overflow-y: scroll;
-    }
-
-    .draggable {
-        width: 60px;
-        height: 60px;
-        font-size: 0.8rem;
-    }
+#errorModal {
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Ajuste da interface para telas muito pequenas, como smartphones */
-@media (max-width: 480px) {
-    .drag-area {
-        height: 40vh;
-        padding: 1rem;
-    }
-
-    .draggable {
-        width: 50px;
-        height: 50px;
-        font-size: 0.7rem;
-    }
-}
-
-/* Menu lateral e dropdown */
-.menu {
-    width: 20%;
-    height: 100vh;
-    background-color: #f4f4f4;
-    padding: 1rem;
-    position: fixed;
-}
-
-@media (max-width: 768px) {
-    .menu {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-}
-
-/* Botões e dropdown adaptáveis */
-button, select {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-@media (max-width: 480px) {
-    button, select {
-        padding: 0.4rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Modal flutuante responsivo */
-.modal-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#languageSelect {
     background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 500px;
+    border-color: #d1d5db;
 }
 
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        max-width: 400px;
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
-
-@media (max-width: 480px) {
-    .modal-content {
-        width: 100%;
-        padding: 1rem;
-    }
-}
-
