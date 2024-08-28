@@ -1,0 +1,60 @@
+/* Custom styles to complement Tailwind CSS */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+}
+
+#logArea {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+#keyMappings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.key-mapping {
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.key-mapping button {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+#errorModal {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#languageSelect {
+    background-color: white;
+    border-color: #d1d5db;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
